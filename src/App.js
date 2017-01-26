@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
-import './App.css';
+import { Router, Route, browserHistory } from 'react-router';
+
+import Home from './containers/home-container.js';
+import QuoteContainer from './containers/quote-container.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Ron Swanson Quote Generator</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router history={browserHistory}>
+        <Route path='/' component={Home} />
+        <Route path='quote' component={QuoteContainer} />
+      </Router>
     );
   }
 }
