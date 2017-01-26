@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import Header from '../components/header.js';
-import ron from '../../assets/ronswanson-square.jpg';
 import Quote from '../components/quote.js';
+import ColourList from '../components/colour-list.js';
+import ron from '../../assets/ronswanson-square.jpg';
 import '../App.css';
 
 export default class QuoteContainer extends Component {
@@ -11,9 +12,11 @@ export default class QuoteContainer extends Component {
 
 		this.state = {
 			quote: '',
+			bgColour: '#5f9ea0',
 		}
 
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.selectBgColour = this.selectBgColour.bind(this);
 	}
 
 	handleSubmit(event) {
@@ -35,12 +38,18 @@ export default class QuoteContainer extends Component {
 		});
 	}
 
+	selectBgColour(bgColour) {
+		this.setState({
+			bgColour: bgColour
+		})
+	}
+
 	render() {
 		return (
 			<div className="App container">
 				<div className="row">
 					<Header />
-					<div className="quote-container" style={{ background: '#5f9ea0' }}>
+					<div className="quote-container" style={{ backgroundColor: this.state.bgColour }}>
 						<img src={ ron } className="ron-image" alt="Ron Swanson" />
 						<Quote quote={ this.state.quote }/>
 					</div>
@@ -48,15 +57,7 @@ export default class QuoteContainer extends Component {
 					>
 						<input type="submit" value="Click for a new quote" />
 					</form>
-					<div className="colors-container">
-						<div className="select-color" style={{ background: '#DA4C45' }}></div>
-						<div className="select-color" style={{ background: '#7796A0' }}></div>
-						<div className="select-color" style={{ background: '#FC7C8B' }}></div>
-						<div className="select-color" style={{ background: '#82B5A0' }}></div>
-						<div className="select-color" style={{ background: '#BB99C2' }}></div>
-						<div className="select-color" style={{ background: '#D3D88A' }}></div>
-						<div className="select-color" style={{ background: '#5f9ea0' }}></div>
-					</div>
+					<ColourList selectBgColour={this.selectBgColour} bgColour={this.state.bgColour} />
 				</div>
 			</div>
 		);

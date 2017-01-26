@@ -47,12 +47,13 @@ form {
   margin-top: 30px;
 }
 
-.colors-container {
+.colours-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
-.select-color {
+.select-colour {
   width: 100%;
   max-width: 100px;
   height: 100px;
