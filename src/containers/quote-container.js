@@ -11,10 +11,18 @@ export default class QuoteContainer extends Component {
 		this.state = {
 			quote: '',
 		}
+
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleSubmit(event) {
-		// event.preventDefault();
+		event.preventDefault();
+		$.get('http://ron-swanson-quotes.herokuapp.com/v2/quotes').then(response => {
+			// console.log(response);
+			this.setState({
+				quote: response,
+			});
+		});
 	}
 
 	componentDidMount() {

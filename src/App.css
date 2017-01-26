@@ -20,17 +20,13 @@
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
+  margin-top: 150px;
 }
 
 .link-quote:hover {
   color: #333;
   border-color: #888;
   outline: 0;
-}
-
-
-.home-form {
-  margin-top: 90px;
 }
 
 /* .App-logo {
