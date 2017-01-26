@@ -1,5 +1,7 @@
 .quote {
-  font-size: large;
-  padding: 3em;
-  min-height: 90px;
+  font-size: 2em;
+  font-weight: 200;
+  width: 100%;
+  padding: 1em 2em 1em 0;
+  margin-bottom: 0;
 }

@@ -5,10 +5,6 @@ export default function Quote({
 	quote,
 }) {
 	return (
-		<div className="container">
-			<div className="row">
-				<p className="quote">{quote}</p>
-			</div>
-		</div>
+		<p className="quote" style={{ color: '#ffffff' }}>{quote}</p>
 	);
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import Header from '../components/header.js';
+import ron from '../../assets/ronswanson-square.jpg';
 import Quote from '../components/quote.js';
 import '../App.css';
 
@@ -38,7 +39,14 @@ export default class QuoteContainer extends Component {
 		return (
 			<div className="App">
 				<Header />
-				<Quote quote={ this.state.quote }/>
+				<div className="container">
+					<div className="row">
+						<div className="quote-container" style={{ background: '#5f9ea0' }}>
+							<img src={ ron } className="ron-image" alt="Ron Swanson" />
+							<Quote quote={ this.state.quote }/>
+						</div>
+					</div>
+				</div>
 				<form onSubmit={ this.handleSubmit }
 				>
 					<input type="submit" value="Click for a new quote" />
