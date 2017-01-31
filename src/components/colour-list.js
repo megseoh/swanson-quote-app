@@ -12,7 +12,6 @@ export default function ColourList({
 					key={index}
 					className="select-colour"
 					style={{ backgroundColor: bgColour }}
-					selectBgColour={ bgColour }
 					onClick={ () => selectBgColour(bgColour) } >
 				</div>)}
 		</div>
