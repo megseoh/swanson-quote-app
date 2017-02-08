@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import Header from '../components/header.js';
 import Quote from '../components/quote.js';
 import ColourList from '../components/colour-list.js';
 import ron from '../../assets/ronswanson-square.jpg';
@@ -61,19 +60,16 @@ export default class QuoteContainer extends Component {
 
 	render() {
 		return (
-			<div className="App container">
-				<div className="row">
-					<Header />
-					<div className="quote-container" style={{ backgroundColor: this.state.bgColour }}>
-						<img src={ ron } className="ron-image" alt="Ron Swanson" />
-						<Quote quote={ this.state.quote }/>
-					</div>
-					<form onSubmit={ this.handleSubmit }
-					>
-						<input type="submit" value="Click for a new quote" />
-					</form>
-					<ColourList selectBgColour={this.selectBgColour} bgColour={this.state.bgColour} />
+			<div>
+				<div className="quote-container" style={{ backgroundColor: this.state.bgColour }}>
+					<img src={ ron } className="ron-image" alt="Ron Swanson" />
+					<Quote quote={ this.state.quote }/>
 				</div>
+				<form onSubmit={ this.handleSubmit }
+				>
+					<input type="submit" value="Click for a new quote" />
+				</form>
+				<ColourList selectBgColour={this.selectBgColour} bgColour={this.state.bgColour} />
 			</div>
 		);
 	}
