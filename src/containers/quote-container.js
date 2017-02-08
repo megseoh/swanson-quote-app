@@ -52,8 +52,7 @@ export default class QuoteContainer extends Component {
 					<img src={ ron } className="ron-image" alt="Ron Swanson" />
 					<Quote quote={ this.state.quote }/>
 				</div>
-				<form onSubmit={ this.handleSubmit }
-				>
+				<form onSubmit={ this.handleSubmit } >
 					<input type="submit" value="Click for a new quote" />
 				</form>
 				<ColourList selectBgColour={this.selectBgColour} bgColour={this.state.bgColour} />

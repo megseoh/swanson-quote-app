@@ -5,7 +5,7 @@ import '../App.css';
 export default class HomeContainer extends Component {
 	render() {
 		return (
-			<div className="App container">
+			<div className="app container">
 				<div className="row">
 				<Header />
 				{ this.props.children }

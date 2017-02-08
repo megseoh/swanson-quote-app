@@ -5,6 +5,6 @@ export default function Quote({
 	quote,
 }) {
 	return (
-		<p className="quote" style={{ color: '#ffffff' }}>{quote}</p>
+		<p className="quote" style={{ color: '#ffffff' }}>{ quote }</p>
 	);
 }

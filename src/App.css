@@ -1,32 +1,5 @@
-.App {
+.app {
   text-align: center;
-}
-
-.link-quote {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  box-sizing: border-box;
-  margin-top: 150px;
-}
-
-.link-quote:hover {
-  color: #333;
-  border-color: #888;
-  outline: 0;
 }
 
 .quote-container {
@@ -47,6 +20,11 @@ form {
   margin-top: 30px;
 }
 
+input[type="submit"],
+input[type="submit"]:hover {
+  transition: all 0.2s linear;
+}
+
 .colours-container {
   display: flex;
   justify-content: space-between;
@@ -58,14 +36,15 @@ form {
   max-width: 100px;
   height: 100px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+/* .app-logo {
+  animation: app-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-@keyframes App-logo-spin {
+@keyframes app-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 } */
