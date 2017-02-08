@@ -18,23 +18,10 @@ export default class QuoteContainer extends Component {
 		this.selectBgColour = this.selectBgColour.bind(this);
 	}
 
-	// tried to refactor to not repeat quote quote URL but not working
-	// SWANSON_QUOTE_URL = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes';
-
-	// componentDidMount() {
-	// 	this.getQuote();
-	// }
-
-	// getQuote(overWriteURL) {
-	// 	event.preventDefault();
-	// 	$.get(overWriteURL ? overWriteURL : this.SWANSON_QUOTE_URL)
-	// 		.then(response => this.setState({
-	// 			quote: response,
-	// 		}));
-	// }
+	SWANSON_QUOTE_URL = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes';
 
 	componentDidMount() {
-		$.get('http://ron-swanson-quotes.herokuapp.com/v2/quotes').then(response => {
+		$.get(this.SWANSON_QUOTE_URL).then(response => {
 			// console.log(response);
 			this.setState({
 				quote: response,
@@ -44,7 +31,7 @@ export default class QuoteContainer extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
-		$.get('http://ron-swanson-quotes.herokuapp.com/v2/quotes').then(response => {
+		$.get(this.SWANSON_QUOTE_URL).then(response => {
 			// console.log(response);
 			this.setState({
 				quote: response,
